@@ -7,7 +7,7 @@
 </div>
 
 
-IPM-kF-Solver (Interior Point Method based on kernel function is a Matlab library that provides an interior point method based on a new kernel function for solving linear optimization problems of the form:
+IPM-kF-Solver (Interior Point Method based on Kernel Function Solver) is a Matlab library that provides an interior point method based on a new kernel function for solving linear optimization problems of the form:
 
 $$
 \begin{align}
