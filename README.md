@@ -25,7 +25,7 @@ IPM-kF-Solver was  implemented by Nawel BOUDJELLAL.
 ## How to cite IPM-kF-Solver
 
 ### In an article
-The IPM-kF-Solver is been programmed for a publication of our paper entitiled "A new efficient kernel function with a finite double barrier term for LCCO" in TOP Journal by the authors: Nawel BOUDJELLAL, Hayet ROUMILI, Djamel BENTERKI and Yacine Slimani 
+The IPM-kF-Solver is been programmed for a publication of our paper entitiled "A new efficient kernel function with a finite double barrier term for LCCO" in TOP Journal (https://www.springer.com/journal/11750) by the authors: Nawel BOUDJELLAL, Hayet ROUMILI, Djamel BENTERKI and Yacine Slimani 
 
 ### In link
 
@@ -44,14 +44,14 @@ Eight real problems (For other problems use  (https://sparse.tamu.edu/LPnetlib).
 
 ## Compilation
 
-To compile the IPM-kF-Solver code,  we perform the following instructions:
+To compile the IPM-kF-Solver code, we perform the following instructions:
 
-1- Execute the file PrimalDualLP.m to obtain the initial point to start our solver.
+1- Execute the file named  PrimalDualLP.m to get the initial point to start our solver.
 
-2- Execute the file IPMBoudjellal.m to obtain the optimal solution of liear problem.
+2- Execute the file named IPMBoudjellal.m to get the optimal solution of liear problem.
 
 ## Solving a problem with IPM-kF-Solver
 
-To solve a real problem by IPM-kF-Solver, it is necessary to  change the nom of real problem in two files (PrimalDualLP.m and IPMBoudjellal.m)
+To solve a real problem by IPM-kF-Solver, it is necessary to  change the name of real problem in two files (PrimalDualLP.m and IPMBoudjellal.m)
 
 
