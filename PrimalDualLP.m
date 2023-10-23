@@ -1,10 +1,11 @@
-% solution initial strictement réalisable primal dual de problème linéaire
-% (PL)
+% Initial solution strictly feasible primal dual of linear problem
+% (LP)
            %Ax=b,x>=0
            %A'y+z=c,z>=0
 clc
 clear all
 %tic
+%Problem
  load("lp_scagr7.mat")
 A = Problem.A; 
 A=full(A);
