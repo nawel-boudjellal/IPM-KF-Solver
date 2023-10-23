@@ -48,7 +48,7 @@ To compile the IPM-kF-Solver code, we perform the following instructions:
 
 1- Execute the file named  PrimalDualLP.m to get the initial point to start our solver.
 
-2- Execute the file named IPMBoudjellal.m to get the optimal solution of liear problem.
+2- Execute the file named IPMBoudjellal.m to get the optimal solution of linear problem.
 
 ## Solving a problem with IPM-kF-Solver
 
