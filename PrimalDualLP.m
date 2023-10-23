@@ -5,8 +5,8 @@
 clc
 clear all
 %tic
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Example Netlib
-%Name of problem lp_scagr7.mat
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Example Netlib
+%Name of problem is: lp_scagr7.mat
 load("lp_scagr7.mat")
 A = Problem.A; 
 A=full(A);
