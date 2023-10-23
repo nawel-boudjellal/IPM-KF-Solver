@@ -5,7 +5,7 @@ tic
 theta=0.99;
 beta=0.99;
  epsilon=10^(-4);
-% Exemple de Netlib
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Netlib example
 load("lp_scagr7.mat")
 A = Problem.A; 
 a=full(A);
@@ -13,8 +13,9 @@ b = Problem.b;
 b=full(b);
 c = Problem.aux.c;
 c=full(c);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 [m,n]=size(A);
-%Le point initial est trouvé par l'exécution de fichier PrimalDualPL.m
+%The initial point is found by executing PrimalDualPL.m file
 % x=zeros(n,1);
 % z=zeros(n,1);
  % y=zeros(m,1);
@@ -30,7 +31,6 @@ psi1v=zeros(n,1);
  while x'*z>epsilon
      %external iteration
      mu=(1-theta)*mu;
-     %le vecteur réduit
      v=sqrt(x.*z/mu);
      for i=1:n
          psiv(i)=psi(p,v(i));
@@ -38,7 +38,7 @@ psi1v=zeros(n,1);
      phi=sum(psiv);
    
      while phi>tau
-       %External iteration
+       %Interne iteration
        for i=1:n
            psi1v(i)=psi1(p,v(i));
        end
@@ -60,7 +60,6 @@ psi1v=zeros(n,1);
       alphax=depl(x,deltax);
       alphaz=depl(z,deltaz);
      alpha=beta*min(alphax,alphaz);
-     %Optimal solution (x,y,z)
        x=x+alpha*deltax;
        y=y+alpha*deltay;
        z=z+alpha*deltaz;
@@ -77,9 +76,10 @@ psi1v=zeros(n,1);
  primal=c'*x;
  dual=b'*y;
  saut=x'*z;
-% fprintf('La valeur de saut est', saut);
-  %fprintf('La valeur optimale primale: ', primal);
-   % fprintf('La valeur optimale duale: %.10f\n', dual);
-   % fprintf('Le nombre d'itération externe est', kext);
-
+% fprintf('Gap value is', saut);
+% fprintf('optimal solution is', x,y,z)
+  %fprintf('The primal optimal value: ', primal);
+   % fprintf('The dual optimal value: %.10f\n', dual);
+   % fprintf('The number of external iterations is', kext);
+ % fprintf('The number of interne iterations is', kint);
  
