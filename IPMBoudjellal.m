@@ -76,10 +76,10 @@ psi1v=zeros(n,1);
  primal=c'*x;
  dual=b'*y;
  saut=x'*z;
-% fprintf('Gap value is', saut);
-% fprintf('optimal solution is', x,y,z)
-  %fprintf('The primal optimal value: ', primal);
-   % fprintf('The dual optimal value: %.10f\n', dual);
-   % fprintf('The number of external iterations is', kext);
+% fprintf('Duality gap is', saut);
+% fprintf('optimal solution is', x,y,z);
+%fprintf('The primal optimal value: ', primal);
+ % fprintf('The dual optimal value: %.10f\n', dual);
+ % fprintf('The number of external iterations is', kext);
  % fprintf('The number of interne iterations is', kint);
  
