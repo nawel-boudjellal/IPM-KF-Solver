@@ -5,18 +5,19 @@
 clc
 clear all
 %tic
-%Problem
- load("lp_scagr7.mat")
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Example Netlib
+%Name of problem lp_scagr7.mat
+load("lp_scagr7.mat")
 A = Problem.A; 
 A=full(A);
 b = Problem.b;
 b=full(b);
 c = Problem.aux.c;
 c=full(c);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 [m,n]=size(A);
 B=[A,zeros(m,m),zeros(m,m),zeros(m,n);zeros(n,n),A',-A',eye(n)];
 S=[b;c];
-%le procedure de Karmarkar
 w=pointinit(B,S);
 %%%%%%
 x=w(1:n);
