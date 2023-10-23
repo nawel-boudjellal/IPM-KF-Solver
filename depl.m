@@ -1,4 +1,4 @@
-%le pas de déplacement%
+%The step size%
 function pasp=depl(x,deltax)
 %min=0.99;
 min=1;
