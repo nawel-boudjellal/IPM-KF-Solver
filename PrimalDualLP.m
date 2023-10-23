@@ -1,0 +1,28 @@
+% solution initial strictement réalisable primal dual de problème linéaire
+% (PL)
+           %Ax=b,x>=0
+           %A'y+z=c,z>=0
+clc
+clear all
+%tic
+ load("lp_scagr7.mat")
+A = Problem.A; 
+A=full(A);
+b = Problem.b;
+b=full(b);
+c = Problem.aux.c;
+c=full(c);
+[m,n]=size(A);
+B=[A,zeros(m,m),zeros(m,m),zeros(m,n);zeros(n,n),A',-A',eye(n)];
+S=[b;c];
+%le procedure de Karmarkar
+w=pointinit(B,S);
+%%%%%%
+x=w(1:n);
+y=w(n+1:m+n)-w(m+n+1:2*m+n);
+z=w(2*m+n+1:2*(m+n));
+%input('le point initial')
+disp(x)
+disp(y)
+disp(z)
+%toc
